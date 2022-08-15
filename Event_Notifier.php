@@ -27,22 +27,40 @@
     
     ?>
 
-    <!--taking the list of recipents-->
-    <h2>Step1: Choose the file containing list of Recipents(recipents.txt)</h2>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" accept=".txt" name="recipients_file">
-        <input type="submit" value="Submit list">
-    </form>
+        <!--taking the list of recipents-->
+        <h2>Step1: Choose the file containing list of Recipents(recipents.txt)</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" accept=".txt" name="recipients_file">
+            <input type="submit" value="Submit list">
+        </form>
 
-    <!--taking the format to send-->
-    <h2>Step2: Choose the file containing Format of email(format.txt)</h2>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" accept=".txt" name="format_file">
-        <input type="submit" value="Submit format" />
-    </form>
+        <!--taking the format to send-->
+        <h2>Step2: Choose the file containing Format of email(format.txt)</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" accept=".txt" name="format_file">
+            <input type="submit" value="Submit format" />
+        </form>
+        <br/><br/><br/>
+        <!--button to show contents of recipients.txt in a new tab-->
+        <form action="recipients_check.php">
+            <input type="submit" value="Check and View Uploaded files">
+        </form>
+        <br/><br/>
+        <!--button to show contents of format.txt in a new tab-->
+        <form action="format_check.php">
+            <input type="submit" value="Check and View Format">
+        </form>
+        <!--Creating the final send Button, which will send the mails after processing all data.-->
+        <centre>
+            <form action="process.php">
+                <h4>Be really sure before sending.</h4>
+                <input type="submit" value="SEND ALL💣🔥">
+            </form>
+        </centre>
 
 
-    <script src="" async defer></script>
+
+        <script src="" async defer></script>
 </body>
 
 </html>

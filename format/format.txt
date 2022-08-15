@@ -1,0 +1,14 @@
+#%Invitation mail from this this 
+Hello #^ we are happy to invite you in the Google summer of code organised by this this institute.
+Please register here [link] with your official mail id.
+According to our records, you should register using this email accout #@.
+Hope we see you there,
+Thanks and regards 
+From 
+his this organisation.
+Organisation email.
+sent to-
+Name-#^
+Email-#@
+This is a automatically Generated Email sent by using Event_Notification_System made by https://ashutosh7i.me/
+Email generated on DATETIME.

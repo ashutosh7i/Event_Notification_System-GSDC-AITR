@@ -1,0 +1,36 @@
+there are two files to be created before using the programme,
+
+The first one is the recipients.txt which contains the names and email addresses of the recipients in a defined manner given below-
+#the file should begin with the firstName_surName.
+#then there should be -&&- this combinations for characters irrespective of the space between them
+#then the respective email of the recipient.
+this should be format of recipients.txt file.
+a example given below=
+recipient.txt=  {         Aashutosh_Soni-&&-Ashutoshsonitest@gmail.com
+                        Sundar_Pichai-&&-hisemail@gmail.com
+                        Ratan_Tata-&&-Hisemail@tata.in
+                        etc etc.
+                }
+
+The second file is format.txt, which contains the matter to be sent to the user ,
+but to make it more involving or user friendly, variable names should be used in place of user name and surname and user email.
+At the time of execution, the program will automatically put these variables from the recipients.txt file and will send it to same email account.
+the format should look like this=
+format.txt=     {   #%Invitation for you for GSOC 2022.
+                        Hello #^ we are happy to invite you in the Google summer of code organised by this this institute.
+                        Please register here [link] with your official mail id.
+                        according to our records, you should register using this email accout #@.
+
+                        Hope we see you there,
+                        thanks and regards 
+                        from 
+                        this this organisation.
+                        organisation email.
+
+                        sent to
+                        Name- #^
+                        Email- #@
+                        This is a automatically Generated Email sent by using Event_Notification_System made by https://ashutosh7i.me/
+                        Email generated on DATATIME.
+                }
+
