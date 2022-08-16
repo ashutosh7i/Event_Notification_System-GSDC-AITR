@@ -1,5 +1,7 @@
 <?php
 error_reporting(0);
+date_default_timezone_set('Asia/Kolkata');
+
 //todo
 //initialize email function.-done
 //read format and find variables.-done
@@ -24,7 +26,7 @@ $recipients=file_get_contents("recipients/recipients.txt"); //open
 $lines = explode("\n", $recipients);   //seperate based on newline
 foreach($lines as $line){              //for each line do-
     $parsed=explode('-&&-', $line);;                  // , to create a array of reciepents.
-$format_default=file_get_contents("format/format.txt");
+$format_default=file_get_contents("format/format.html");
 //code to replace #^ with username
 $after_replace_username=str_replace('#^',$parsed[0],$format_default);
 //code to replace #@ with user email.
@@ -32,7 +34,7 @@ $after_replace_email=str_replace('#@',$parsed[1],$after_replace_username);
 //code to replace DATETIME with current Data&Time.
 $after_date_time=str_replace('DATETIME',(date("Y/m/d")." at ".date("h:i:sa")),$after_replace_email);
 //how it looks after replace-
-echo($after_date_time);
+//echo($after_date_time);
 }
 
 
@@ -45,20 +47,21 @@ foreach($lines as $line){              //for each line do-
     echo($parsed[1]); //will get all names seperated by a comma
     echo(",");                  // , to create a array of reciepents.
 
-
+//code to read subject of mail
+$mail_subject=file_get_contents("subject.txt");
 try {
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Edebug output
     $mail->isSMTP();                                            
-    $mail->Host       = 'smtp-relay.sendinblue.com';//SMTP_Id
+    $mail->Host       = 'in-v3.mailjet.com';//SMTP_Id
     $mail->SMTPAuth   = true;                        
-    $mail->Username   = 'ashtechindia130@gmail.com';//SMTP username
-    $mail->Password   = 'R8yQ6XJBO3SUprfK';         //SMTP password
+    $mail->Username   = '51c4d47dd1fb90c0b19e40a558f47e71';//SMTP username
+    $mail->Password   = '2d411f4ffd02050f92e0d430fca2d296';         //SMTP password
     $mail->Port       = 587;                        //SMTP_port
 
     //Recipients
-    $mail->setFrom('someOrganisation@ashutosh7i.me', 'Ashutosh7i');
+    $mail->setFrom('ashtechindia130@gmail.com', 'Ashutosh7i');
     //$mail->addAddress('ashtechindia130@gmail.com','');     //=from recipients.txt;.'create a script with emails seperated with , to be used in process .txt';
-    //$mail->addAddress($parsed[1]);
+    $mail->addAddress($parsed[1]);
 
     //Attachments
    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -66,19 +69,8 @@ try {
 
     //Content
     $mail->isHTML(true);      //Set email format to HTML
-    $mail->Subject = 'Here is the subject';    //#% from format.txt;
-    $mail->Body    = //from format.txt; Each line should be separated with a CRLF (\r\n)
-'
-    <html>
-    <head>
-      <title>this is the title</title>
-    </head>
-    <body>
-      <p>hiii!</p>
-      
-    </body>
-    </html>
-    ';
+    $mail->Subject = $mail_subject;    //#% from format.txt;
+    $mail->Body    = $after_date_time;
     $mail->send();
     echo 'Message has been sent';
     echo nl2br("\n\n");

@@ -40,10 +40,28 @@
             <input type="file" accept=".txt" name="format_file">
             <input type="submit" value="Submit format" />
         </form>
-        <br/><br/><br/>
+        <br/>
+        
+        <h2>Step3: Enter the Subject of email(</h2>
+        <form method="post">
+    Enter The Subject Here:<br>
+    <input type="text" name="textdata"><br>
+    <input type="submit" name="submit">
+  </form>
+  <?php
+              
+              if(isset($_POST['textdata']))
+              {
+              $data=$_POST['textdata'];
+              $fp = fopen('subject.txt', 'a');
+              fwrite($fp, $data);
+              fclose($fp);
+              }
+              ?>
+        <br/><br/>
         <!--button to show contents of recipients.txt in a new tab-->
         <form action="recipients_check.php">
-            <input type="submit" value="Check and View Uploaded files">
+            <input type="submit" value="Check and View recipients files">
         </form>
         <br/><br/>
         <!--button to show contents of format.txt in a new tab-->

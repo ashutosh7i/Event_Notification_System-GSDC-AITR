@@ -28,7 +28,7 @@ also defining the default format.
 9.added DATATIME in format.txt and code to send sending timestamp
 ----
 Now the serious part-
-10.//to create a uservise preview in format check.php----cosmetic, so later.
+10.to create a uservise preview in format check.php----cosmetic, so later.
 11.create the main FINAL-SEND Button , which should process this all and send the mail, for this creating a process.php.
 it should have a js browser alert to take confirmation from sender.
 12.since sending email is big part, it requires a php library and a whole smtp server with domain hosted service, this project is for demonstration service so
@@ -42,3 +42,8 @@ did these things-
 17.code to replace #@ with user email.-done
 18.Adding data and time in place of DATATIME.-done
 # as of now , the mailer works great, username and email gets seperated, gets correctly replaced , everything working as expected.-git push
+01:26PM 16/08/2022
+19 updated format.txt to format.html, so it can be displayed nicely in email.
+20 used new service form smtp.
+21 create to take subject in a form store in subject, subject.txt
+22. done , checked creating a release link and submitting.

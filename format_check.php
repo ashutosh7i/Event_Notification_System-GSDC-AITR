@@ -3,7 +3,7 @@
 
 
 
-$format="format/format.txt";
+$format="format/format.html";
 if (file_exists($format)){
     echo nl2br("format.txt exist.\n");
     //echo '<script>alert("Data File exists")</script>';

@@ -1,5 +1,10 @@
-there are two files to be created before using the programme,
+Prerequisites-
+1.XAMPP/Apache/Ngnix any php server or use Docker link.
+2.SMTP server for email address {currently you will be using mine, can be configured in process.php}
+3.Any web-Browser,active internet connection.
 
+
+There are two files to be created before using the programme,
 The first one is the recipients.txt which contains the names and email addresses of the recipients in a defined manner given below-
 #the file should begin with the firstName_surName.
 #then there should be -&&- this combinations for characters irrespective of the space between them
@@ -16,7 +21,7 @@ The second file is format.txt, which contains the matter to be sent to the user 
 but to make it more involving or user friendly, variable names should be used in place of user name and surname and user email.
 At the time of execution, the program will automatically put these variables from the recipients.txt file and will send it to same email account.
 the format should look like this=
-format.txt=     {   #%Invitation for you for GSOC 2022.
+format.txt=     {   
                         Hello #^ we are happy to invite you in the Google summer of code organised by this this institute.
                         Please register here [link] with your official mail id.
                         according to our records, you should register using this email accout #@.
@@ -34,3 +39,14 @@ format.txt=     {   #%Invitation for you for GSOC 2022.
                         Email generated on DATATIME.
                 }
 
+steps-
+1.Open index.php.
+2.Select recipients.txt {provided}
+3.Select format.txt {Provided}
+4.Enter the Subject of email.
+5.Check if recipient list is loaded, press check button.
+6.Check if format is loaded, press check button.
+7.Finally Press SEND_ALL button to send email to recipients containg subject and format.
+
+for any questions,queries or bug reporting,
+email- aashutoshsoni210768@acropolis.in
