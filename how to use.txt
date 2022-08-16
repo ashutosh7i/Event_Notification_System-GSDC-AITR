@@ -1,6 +1,6 @@
 Prerequisites-
 1.XAMPP/Apache/Ngnix any php server or use Docker link.
-2.SMTP server for email address {currently you will be using mine, can be configured in process.php}
+2.SMTP server for email address {can be configured in process.php}
 3.Any web-Browser,active internet connection.
 
 
@@ -47,6 +47,3 @@ steps-
 5.Check if recipient list is loaded, press check button.
 6.Check if format is loaded, press check button.
 7.Finally Press SEND_ALL button to send email to recipients containg subject and format.
-
-for any questions,queries or bug reporting,
-email- aashutoshsoni210768@acropolis.in

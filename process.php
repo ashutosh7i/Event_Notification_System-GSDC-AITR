@@ -52,14 +52,14 @@ $mail_subject=file_get_contents("subject.txt");
 try {
     //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Edebug output
     $mail->isSMTP();                                            
-    $mail->Host       = 'in-v3.mailjet.com';//SMTP_Id
+    $mail->Host       = 'host.com';//SMTP_Id
     $mail->SMTPAuth   = true;                        
-    $mail->Username   = '51c4d47dd1fb90c0b19e40a558f47e71';//SMTP username
-    $mail->Password   = '2d411f4ffd02050f92e0d430fca2d296';         //SMTP password
+    $mail->Username   = 'user@service.com';//SMTP username
+    $mail->Password   = 'password';         //SMTP password
     $mail->Port       = 587;                        //SMTP_port
 
     //Recipients
-    $mail->setFrom('ashtechindia130@gmail.com', 'Ashutosh7i');
+    $mail->setFrom('set display email', 'display name');
     //$mail->addAddress('ashtechindia130@gmail.com','');     //=from recipients.txt;.'create a script with emails seperated with , to be used in process .txt';
     $mail->addAddress($parsed[1]);
 
