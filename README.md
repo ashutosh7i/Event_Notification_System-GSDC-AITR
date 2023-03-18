@@ -1,49 +1,44 @@
 # Event_Notification_System-GSDC-AITR
-This is the repository for event notification system i made for selection of new members in My college's Google Student Developer Club, this is a project for web-dev roles selection round 1🔥😎😂
+This is a full-fledged bulk email sending program which can be used to send customized emails to thousands of users with just a few clicks. This was created as a solution to the problem statement for the selection of new team members in GDSC-AITR club.
+{which i lost due to nepotism😂}
 
-this is 13-08-22 11:22PM , starting the project build.
-So as the name suggests, i think the jury wants a system or piece of software that can notify a group of people about a event which is going to happen, as we know we are in a professional environment, the main source of communication, should and must be Email Communication,
+#Technologies Used-
+## Frontend:
+* HTML.
+* CSS.
+* JavaScript.
 
-# so 
-my project will be using email to notify a group of people about the happening of a event.
-the Software will take a list of peoples email in a text file, lets call it recipients.txt
-then there would be a premade email format , or a form in which there will be invitation text for receipients named as format.txt
-the name of receipents will be named as #^ receipients in the email format, then the Programme will automatically replace these variables with the actual name and other details of the receipents.
-the software will automatically send the mails to resepected email id's form the internal mail id.
-the software will do all these tasks in few clicks, hence making the work easier and hassel free.
+## Backend:
+* PHP 8
+* PHP Mailer Library
+* SMTP server with Apache
 
-# i will be using html&Css to design the Application, and will use php❤ and a little javascript for the backend.
-so lets start
+# Project Description
 
-things i did-
-1.created Event_Notifier.php
-2.created a simple html website structure so website gets displayed in browser.
-3.created two file upload forms one for recipients_list and one for format in txt file.
-4.now creating a php applet to check if both files exists, if not then tell user to upload these files, in Event_notifier.php
-5.15-08-2022 10:21PM github push
-6.now creating a button enabled php applet to read the reciepents.txt file contents and display them in a new tab/webpage.
-also defining the default format.
-7.now creating a button enabled php applet to read and display format.txt file contents in a new tab.
-8.added #% to store subject in format.txt
-9.added DATATIME in format.txt and code to send sending timestamp
-----
-Now the serious part-
-10.to create a uservise preview in format check.php----cosmetic, so later.
-11.create the main FINAL-SEND Button , which should process this all and send the mail, for this creating a process.php.
-it should have a js browser alert to take confirmation from sender.
-12.since sending email is big part, it requires a php library and a whole smtp server with domain hosted service, this project is for demonstration service so
-i will be using a online smtp server service named sendinblue.com's stmp service, they provide a smtp host and credientials to use it.
-13.also as we are going to use a smtp server, we need external libraries, we will be using and including library named php mailer to handle the mails.
-# it is 16/08/2022 03:26AM midnight Raining😂,working because deadline is today 02:00PM, and after this much efforts, i will not leave it😎🔥💣
-did these things-
-14.initialize email function.-done
-15.read format and find variables.-done
-16.code to replace #^ with user name.-done
-17.code to replace #@ with user email.-done
-18.Adding data and time in place of DATATIME.-done
-# as of now , the mailer works great, username and email gets seperated, gets correctly replaced , everything working as expected.-git push
-01:26PM 16/08/2022
-19 updated format.txt to format.html, so it can be displayed nicely in email.
-20 used new service form smtp.
-21 create to take subject in a form store in subject, subject.txt
-22. done , checked creating a release link and submitting.
+The program takes a list of people's email addresses in a text file, named recipients.txt, and a pre-made email format named format.html. The name of recipients will be marked as #^receipients in the email format, and the program will automatically replace these variables with the actual name and other details of the recipients. The program will then automatically send the emails to the respective email IDs from an internal mail ID. This makes the process of sending bulk emails much easier and hassle-free.
+Usage
+
+### To install and run this program on your local machine, follow these steps:
+
+    * Clone the repository to your local machine.
+    * Install XAMPP server from here https://www.apachefriends.org/download.html
+    * Update the SMTP server credentials in the process.php file.
+    * Upload the recipients.txt file and the format.html file to the uploads directory.
+    * Run the program using a local server.
+
+### To use this program, simply follow these steps:
+
+    * Clone the repository to your local machine.
+    * Navigate to the cloned directory and open Event_Notifier.php.
+    * Upload the recipients.txt file and the format.html file using the file upload forms on the page.
+    * Click the "Preview Recipients" button to see a list of recipients and their details.
+    * Click the "Preview Format" button to see a preview of the email format.
+    * If everything looks good, click the "Send Emails" button to send the emails to the recipients.
+
+Note: Since sending emails is a big part of this program, it requires a PHP library and a whole SMTP server with domain-hosted service. This program uses the online SMTP server service named sendinblue.com's SMTP service. They provide a SMTP host and credentials to use it.
+Installation
+
+## Contribution-
+This project is open to Contribution, Create a issue, Create a PR and it will be merged😉.
+
+Happy Hacking!
