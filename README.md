@@ -39,6 +39,6 @@ Note: Since sending emails is a big part of this program, it requires a PHP libr
 Installation
 
 ## Contribution-
-This project is open to Contribution, Create a issue, Create a PR and it will be merged😉.
+This project is open to Contribution.
 
 Happy Hacking!
